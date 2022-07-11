@@ -7,14 +7,15 @@
 
 # Usage Information #####################################################
 
-# Place this Makefile at the root directory of your ATS project.
-# After running commands 'make', 'make all' or 'make run', a new
-# directory 'build' will be automatically created.
+# Place this Makefile at the root directory of your ATS project. 
+# After running commands `make`, `make all` or `make run`, a 
+# new directory `build` containing the project executable and 
+# intermediate `.c` and `.o` files will be automatically created.
 # 
 # Example (project: helloworld):
 #
 # \build
-#    \bin (resulting executable)
+#    \bin (project executable)
 #       helloworld
 #    \obj (intermediate .o files)
 #       main_dats.o
@@ -23,8 +24,13 @@
 # \src
 #	   \dats (project .dats files)
 #       main.dats
-#    \sats (proejct .sats files)
+#    \sats (project .sats files)
 # Makefile (this file)
+#
+# The following commands are available:
+# - `make all`  : build the project
+# - `make run`  : build then run the project executable
+# - `make clean`: cleanup project
 
 # Project Configuration #################################################
 
@@ -36,7 +42,7 @@ SATSDIR=src/sats
 # Directory containing project .dats files
 DATSDIR=src/dats
 
-# Linking
+# Linking libraries
 INCLUDE:=
 LIBRARY:=
 
@@ -71,7 +77,7 @@ RMRF=rm -rf
 
 # Build the project
 all: build/bin/$(PROJECT)
-# Build the project then run the resulting executable
+# Build then run the project executable
 run: build/bin/$(PROJECT) ; ./build/bin/$(PROJECT)
 # Cleanup the project
 clean:: ; $(RMRF) build
