@@ -73,6 +73,9 @@ PATSOPT=patsopt
 # Cleanup
 RMRF=rm -rf
 
+# Run make in silent mode
+MAKEFLAGS+=--silent
+
 # Main Recipes (editing is not recommended) #############################
 
 # Build the project
