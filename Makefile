@@ -22,7 +22,7 @@
 #    \src (intermediate .c files)
 #       main_dats.c
 # \src
-#	   \dats (project .dats files)
+#    \dats (project .dats files)
 #       main.dats
 #    \sats (project .sats files)
 # Makefile (this file)
